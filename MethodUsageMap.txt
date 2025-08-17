@@ -1,0 +1,127 @@
+Rain-Sensing Wiper System: Methods Definition & Usage Map
+=============================================================
+
+This document lists all major classes and functions in the project, where they are defined, and where they are called/used.
+
+---
+
+## 1. convertWiperSpeedToString / convertSprayModeToString
+- Defined: WiperEnums.cpp
+- Declared: WiperEnums.h
+- Called: WiperSystemManager.cpp (display logic), AutomatedTests.cpp (test output)
+
+## 2. printColoredText
+- Defined: ColorUtilities.cpp
+- Declared: ColorUtilities.h
+- Called: WiperSystemManager.cpp (display output), AutomatedTests.cpp (test output)
+
+## 3. RainSensor
+- Defined: RainSensor.cpp
+- Declared: RainSensor.h
+- Used/Instantiated: WiperSystemManager.h/.cpp, AutomatedTests.cpp
+
+### RainSensor::readSensorData
+- Defined: RainSensor.cpp
+- Called: WiperSystemManager.cpp (auto mode), AutomatedTests.cpp (sensor tests)
+
+### RainSensor::resetSensorFailureState
+- Defined: RainSensor.cpp
+- Called: WiperSystemManager.cpp (switching to auto mode)
+
+## 4. WindshieldWiperController
+- Defined: WindshieldWiperController.cpp
+- Declared: WindshieldWiperController.h
+- Used/Instantiated: WiperSystemManager.h/.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::mapLightPercentageToWiperSpeed
+- Defined: WindshieldWiperController.cpp
+- Called: WindshieldWiperController::processAutomaticModeOperation, AutomatedTests.cpp
+
+### WindshieldWiperController::setWiperSpeed
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::getCurrentWiperSpeed
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::setOperatingMode / getCurrentOperatingMode
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::setWaterSprayMode / getCurrentWaterSprayMode
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::activateWaterSprayWithWiper
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::processAutomaticModeOperation
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+### WindshieldWiperController::isWaitingToTurnOffWipers / getRemainingTurnOffSeconds
+- Defined: WindshieldWiperController.cpp
+- Called: WiperSystemManager.cpp, AutomatedTests.cpp
+
+## 5. WiperSystemManager
+- Defined: WiperSystemManager.cpp
+- Declared: WiperSystemManager.h
+- Used/Instantiated: main.cpp, AutomatedTests.cpp
+
+### WiperSystemManager::runSystem
+- Defined: WiperSystemManager.cpp
+- Called: main.cpp
+
+### WiperSystemManager::initializeSystem
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager::runSystem
+
+### WiperSystemManager::selectInitialOperatingMode
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager::initializeSystem
+
+### WiperSystemManager::selectManualWiperSpeed
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager::initializeSystem, WiperSystemManager::processUserInput
+
+### WiperSystemManager::processUserInput
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager::runSystem
+
+### WiperSystemManager::getCurrentTimeString
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager.cpp (display, logging)
+
+### WiperSystemManager::logSystemEvent
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager.cpp (input, status, spray/wiper changes)
+
+### WiperSystemManager::displaySystemStatus
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager.cpp (status display)
+
+### WiperSystemManager::displayHelpInformation
+- Defined: WiperSystemManager.cpp
+- Called: WiperSystemManager.cpp (help, initialization)
+
+## 6. main
+- Defined: main.cpp
+- Called: Application entry point
+
+## 7. AutomatedTestSuite
+- Defined: AutomatedTests.cpp
+- Used/Instantiated: AutomatedTests.cpp
+
+### AutomatedTestSuite::runAllTests
+- Defined: AutomatedTests.cpp
+- Called: main() in AutomatedTests.cpp
+
+### Other AutomatedTestSuite methods
+- Defined: AutomatedTests.cpp
+- Called: Internally by runAllTests
+
+---
+
+For exact line numbers or full code, see the respective source files in your project.
