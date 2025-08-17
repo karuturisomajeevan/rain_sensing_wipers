@@ -1,0 +1,32 @@
+[33mcommit 135faf9c81e096a96ea3ab7b8bfea5f89edfa511[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: basith <basithrahul34@gmail.com>
+Date:   Mon Aug 18 01:52:10 2025 +0530
+
+    Initial commit with my project files
+
+ AI_RECREATION_PROMPTS.md      | 608 [32m++++++++++++++++++++++++++++++++++++++++++[m
+ AutomatedTests.cpp            | 372 [32m++++++++++++++++++++++++++[m
+ CMakeLists.txt                |  56 [32m++++[m
+ ColorUtilities.cpp            |  16 [32m++[m
+ ColorUtilities.h              |  36 [32m+++[m
+ Makefile                      |  43 [32m+++[m
+ MethodUsageMap.txt            | 127 [32m+++++++++[m
+ PROJECT_STRUCTURE.md          | 188 [32m+++++++++++++[m
+ PROJECT_SUMMARY.md            | 232 [32m++++++++++++++++[m
+ README.md                     | 214 [32m+++++++++++++++[m
+ RainSensor.cpp                |  51 [32m++++[m
+ RainSensor.h                  |  48 [32m++++[m
+ TEST_CASES.md                 | 425 [32m+++++++++++++++++++++++++++++[m
+ TEST_RESULTS_TEMPLATE.md      | 250 [32m+++++++++++++++++[m
+ WindshieldWiperController.cpp | 127 [32m+++++++++[m
+ WindshieldWiperController.h   |  96 [32m+++++++[m
+ WiperEnums.cpp                |  20 [32m++[m
+ WiperEnums.h                  |  47 [32m++++[m
+ WiperSystemManager.cpp        | 379 [32m++++++++++++++++++++++++++[m
+ WiperSystemManager.h          |  78 [32m++++++[m
+ WiperSystemPureAuto.exe       | Bin [31m0[m -> [32m255995[m bytes
+ WiperSystemTest.exe           | Bin [31m0[m -> [32m157210[m bytes
+ build.bat                     |  17 [32m++[m
+ main.cpp                      |  17 [32m++[m
+ run_automated_tests.bat       |  35 [32m+++[m
+ 25 files changed, 3482 insertions(+)
